@@ -63,7 +63,7 @@
         var s = d.createElement('script');
         /*********Delete this section if you have packed all files into one*******/
         
-        if (c.SingleEngineFile && !c.engineDir) {
+        /*if (c.SingleEngineFile && !c.engineDir) {
             s.src = c.SingleEngineFile;
         }
         else if (c.engineDir && !c.SingleEngineFile) {
@@ -71,10 +71,10 @@
         }
         else {
             alert('You must specify either the single engine file OR the engine directory in "cocos2d.js"');
-        } 
+        } */
         /*********Delete this section if you have packed all files into one*******/
 
-        //s.src = 'going_rainbow_fruit.js'; //IMPORTANT: Un-comment this line if you have packed all files into one
+        s.src = 'myApp-HelloWorld.js'; //IMPORTANT: Un-comment this line if you have packed all files into one
 
         document.ccConfig = c;
         s.id = 'cocos2d-html5';
