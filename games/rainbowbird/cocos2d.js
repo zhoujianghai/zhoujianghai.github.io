@@ -63,7 +63,7 @@
         var s = d.createElement('script');
         /*********Delete this section if you have packed all files into one*******/
         
-        /*if (c.SingleEngineFile && !c.engineDir) {
+       /* if (c.SingleEngineFile && !c.engineDir) {
             s.src = c.SingleEngineFile;
         }
         else if (c.engineDir && !c.SingleEngineFile) {
