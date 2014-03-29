@@ -27,7 +27,7 @@
 (function () {
     var d = document;
     var c = {
-        COCOS2D_DEBUG:2, //0 to turn debug off, 1 for basic debug, and 2 for full debug
+        COCOS2D_DEBUG:0, //0 to turn debug off, 1 for basic debug, and 2 for full debug
         box2d:false,
         chipmunk:false,
         showFPS:false,
@@ -62,8 +62,8 @@
         //first load engine file if specified
         var s = d.createElement('script');
         /*********Delete this section if you have packed all files into one*******/
-        
-       /* if (c.SingleEngineFile && !c.engineDir) {
+        /*
+        if (c.SingleEngineFile && !c.engineDir) {
             s.src = c.SingleEngineFile;
         }
         else if (c.engineDir && !c.SingleEngineFile) {
