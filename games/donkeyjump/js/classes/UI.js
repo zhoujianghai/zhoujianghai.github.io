@@ -15,20 +15,8 @@
     /**
      * UI事件定义
      */
-    // 打开声音
-    UI.prototype.onsoundopen = my.fn;
-    // 关闭声音
-    UI.prototype.onsoundclose = my.fn;
-    // 成就
-    UI.prototype.onshowcup = my.fn;
-    // 排行榜
-    UI.prototype.onshowcore = my.fn;
     // 开始
     UI.prototype.onplay = my.fn;
-    // 更多
-    UI.prototype.onshowmore = my.fn;
-    // 分享
-    UI.prototype.onshare = my.fn;
     // 暂停
     UI.prototype.onpause = my.fn;
     // 返回列表
@@ -38,22 +26,6 @@
     // 准备
     UI.prototype.onretry = my.fn;
 
-    /**
-     * @private
-     * 初始化声音控制按钮
-     */
-    UI.prototype.__initBtnSound = function() {
-        var btnSound = my.DOM.get('btnSound'), UI = this;
-        btnSound.onclick = my.delegate(function() {
-            if(my.DOM.hasClass(btnSound, 'disabled')) {
-                my.DOM.removeClass(btnSound, 'disabled');
-                this.onsoundopen();
-            } else {
-                my.DOM.addClass(btnSound, 'disabled');
-                this.onsoundclose();
-            }
-        }, this, btnSound);
-    }
     /**
      * @private
      * 初始化开始游戏按钮
@@ -104,60 +76,17 @@
             self.onretry();
         }
     }
-    /**
-     * @private
-     * 初始化成就按钮
-     */
-    UI.prototype.__initBtnCup = function() {
-        var btnCup = my.DOM.get('btnCup'), btnCup2 = my.DOM.get('btnCup2'), self = this;
-        btnCup.onclick = btnCup2.onclick = function() {
-            self.onshowcup();
-        }
-    }
-    /**
-     * @private
-     * 初始化排行榜按钮
-     */
-    UI.prototype.__initBtnCore = function() {
-        var btnScore = my.DOM.get('btnScore'), btnScore2 = my.DOM.get('btnScore2'), self = this;
-        btnScore.onclick = btnScore2.onclick = function() {
-            self.onshowcore();
-        }
-    }
-    /**
-     * @private
-     * 初始化更多按钮
-     */
-    UI.prototype.__initBtnMore = function() {
-        var btnMore = my.DOM.get('btnMore'), btnMore2 = my.DOM.get('btnMore2'), self = this;
-        btnMore.onclick = btnMore2.onclick = function() {
-            self.onshowmore();
-        }
-    }
-    /**
-     * @private
-     * 初始化更多按钮
-     */
-    UI.prototype.__initBtnShare = function() {
-        var btnShare = my.DOM.get('btnShare'), btnShare2 = my.DOM.get('btnShare2'), self = this;
-        btnShare.onclick = btnShare2.onclick = function() {
-            self.onshare();
-        }
-    }
+
+
     /**
      * 初始化界面及事件
      */
     UI.prototype.init = function() {
-        this.__initBtnSound();
         this.__initBtnPlay();
         this.__initBtnPause();
         this.__initBtnResumeExit();
         this.__initBtnResume();
         this.__initBtnRetry();
-        this.__initBtnCup();
-        this.__initBtnCore();
-        this.__initBtnMore();
-        this.__initBtnShare();
     }
     /**
      * 设置分数

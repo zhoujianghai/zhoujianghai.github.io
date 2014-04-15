@@ -16,7 +16,8 @@
             my.DOM.remove(my.DOM.get('progressText'));
             init();
         } else {
-            loadAudioResources();
+            //loadAudioResources();
+            init();
         }
     }
 
@@ -59,7 +60,6 @@
      * 初始化
      */
     function init() {
-        Audio.play('ogg_background');
 
         // 创建游戏对象
         var donkeyJump = new DonkeyJump();

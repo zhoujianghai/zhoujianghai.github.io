@@ -79,34 +79,23 @@
 
         switch(this.name) {
             case 'prop_spring01':
-                Audio.play('ogg_spring');
                 donkey.jump();
                 donkey.speedY = -3;
                 donkey.anim.speed = 0.2;
                 break;
             case 'props_michael':
-                Audio.play('ogg_mj');
-                Audio.play('ogg_mj_pick');
                 donkey.stateUpdate = donkey.MJ;
                 break;
             case 'props_super':
-                Audio.play('ogg_super');
-                Audio.play('ogg_super_pick');
                 donkey.stateUpdate = donkey.superJump;
                 break;
             case 'props_gliding01':
-                Audio.play('ogg_gliding');
-                Audio.play('ogg_gliding_pick');
                 donkey.stateUpdate = donkey.gliding;
                 break;
             case 'props_ufo':
-                Audio.play('ogg_ufo');
-                Audio.play('ogg_ufo_pick');
                 donkey.stateUpdate = donkey.UFO;
                 break;
             case 'props_balloon':
-                Audio.play('ogg_balloon');
-                Audio.play('ogg_balloon_pick');
                 donkey.stateUpdate = donkey.balloon;
                 break;
         }

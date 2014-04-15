@@ -144,7 +144,6 @@
         }
 
         if(this.animName != 'superjump') {
-            Audio.play('ogg_super');
             this.setAnim('superjump');
             this.speedY = -0.8;
             this.acceY = 0;
@@ -162,7 +161,6 @@
         var game = this.game;
 
         if(this.animName != 'jump') {
-            Audio.play('ogg_jump');
             this.setAnim('jump');
             this.speedY = -1;
             this.acceY = 1 / 600;
@@ -293,8 +291,6 @@
      * 死亡
      */
     Donkey.prototype.dead = function() {
-        Audio.pause('ogg_background');
-        Audio.play('ogg_die');
         this.stateUpdate = this.__dead;
         this.setAnim('dead');
         this.speedX = 0;

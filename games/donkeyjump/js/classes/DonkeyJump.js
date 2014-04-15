@@ -206,7 +206,6 @@
         ui.init();
 
         ui.onretry = function() {
-            Audio.play('ogg_background');
 
             this.toBody();
             donkeyJump.stateInit();
@@ -365,7 +364,6 @@
 
                             var name = stair.name;
                             if(name == 'stair_friable') {// 脆弱的云
-                                Audio.play('ogg_step_broken');
                                 stair.anim.play();
                             } else if(name == 'stair_moveable') {// 会移动的云
                                 stair.anim.gotoAndPlay(1);
@@ -391,26 +389,21 @@
 
         if(this.readyTime == 0) {
             this.ui.beingReadyVisible(true);
-            Audio.play('ogg_321');
         } else if(this.readyTime > 3000) {
             this.ui.beingGoVisible(false);
             go = true;
-            Audio.play('ogg_go');
             this.ui.btnPauseVisible(true);
         } else if(this.readyTime > 2000) {
             if(!this.isGo) {
                 this.ui.beingReadyVisible(false);
                 this.ui.beingGoVisible(true);
                 this.isGo = true;
-                Audio.play('ogg_321');
             }
         } else if(this.readyTime > 1000) {
             if(this.readyTime + deltaTime > 2000) {
-                Audio.play('ogg_321');
             }
         } else {
             if(this.readyTime + deltaTime > 1000) {
-                Audio.play('ogg_321');
             }
         }
         this.readyTime += deltaTime;
@@ -451,7 +444,6 @@
      */
     DonkeyJump.prototype.pause = function() {
         this.stop();
-        Audio.pauseAll();
     }
     /**
      * 游戏结束
