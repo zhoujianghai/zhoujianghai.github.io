@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>一个都别掉-前进天虹版，释放你那灵敏的小爪爪，快来挑战吧！</title>
     <link rel="icon" type="image/png" href="http://codingnow.cn/favicon.ico">
-    <meta name="viewport" content="user-scalable=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
     <meta name="screen-orientation" content="portrait"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="full-screen" content="yes"/>
-    <meta name="x5-fullscreen" content="true"/>
+
     <style>
         body, canvas, div {
             -moz-user-select: none;
@@ -17,13 +17,23 @@
             -khtml-user-select: none;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
+        
+        html,body,canvas {
+            margin: 0px;
+            padding: 0px;
+            border:none;
+            text-align: center;
+            background-color: black;
+        }
+
+        
     </style>
 </head>
 
-<body style="padding:0; margin: 0;text-align: center;background: #f2f6f8;">
-    <canvas id="gameCanvas" width="640" height="960"></canvas>
+<body style="padding:0; margin: 0;text-align: center;background: #00000000;">
+    <canvas id="gameCanvas"  width="640" height="960"></canvas>
 
 <script src="cocos2d.js"></script>
-<img style="position:absolute;left:-9999px" src="http://zhoujianghai.github.io/games/qianjin-neverdrop/res/icon_wechat.png" onerror="this.parentNode.removeChild(this)">
+<img style="position:absolute;left:-9999px" src="http://zhoujianghai.github.io/games/neverdrop/res/icon_wechat.png" onerror="this.parentNode.removeChild(this)">
 </body>
 </html>
